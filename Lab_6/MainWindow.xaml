@@ -1,0 +1,23 @@
+﻿<Window x:Class="MunicipalManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Municipal Management" Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Button.Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Button x:Name="btnFill" Click="btnFill_Click">Заполнить список</Button>
+            <Button x:Name="btnAdd" Click="btnAdd_Click">Добавить</Button>
+            <Button x:Name="btnEdit" Click="btnEdit_Click">Изменить</Button>
+            <Button x:Name="btnRemove" Click="btnRemove_Click">Удалить</Button>
+        </StackPanel>
+        <ListBox x:Name="lBox" Grid.Column="1" ItemsSource="{Binding}"/>
+    </Grid>
+</Window>
